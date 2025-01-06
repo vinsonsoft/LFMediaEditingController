@@ -58,7 +58,7 @@ NSUInteger kToolbar_MaxItems = 6;
 
 #define kToolbar_RateTips(r) [NSString stringWithFormat:@"x %.1f", r]
 
-#define kToolbar_SelectedColor [UIColor colorWithRed:(26/255.0) green:(173/255.0) blue:(25/255.0) alpha:1.0]
+#define kToolbar_SelectedColor [UIColor colorWithRed:(250/255.0) green:(86/255.0) blue:(30/255.0) alpha:1.0]
 #define kToolbar_NormalsColor [UIColor whiteColor]
 
 #pragma mark - LFToolCollectionItem

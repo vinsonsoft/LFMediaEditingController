@@ -8,6 +8,7 @@
 
 #import "LFClipToolbar.h"
 #import "LFMediaEditingHeader.h"
+#import "LFMediaEditingController-Swift.h"
 
 @interface LFClipToolbar ()
 {
@@ -52,7 +53,7 @@
 
 - (void)customInit
 {
-    self.oKButtonTitleColorNormal = [UIColor colorWithRed:(26/255.0) green:(178/255.0) blue:(10/255.0) alpha:1.0];
+    self.oKButtonTitleColorNormal = [UIColor colorPrimary];
     
     self.rotateCCWImage = [self createRotateCWImageWithHighlighted:NO];
     self.rotateCCWImage_HL = [self createRotateCWImageWithHighlighted:YES];

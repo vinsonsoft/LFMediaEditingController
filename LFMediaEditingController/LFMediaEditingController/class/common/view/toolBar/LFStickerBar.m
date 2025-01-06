@@ -12,6 +12,7 @@
 #import "JRStickerDisplayView.h"
 #import <Photos/Photos.h>
 #import "LFImageCoder.h"
+#import "LFMediaEditingController-Swift.h"
 
 extern LFStickerContentStringKey const LFStickerContentCustomAlbum;
 
@@ -217,8 +218,8 @@ CGFloat const lf_stickerMargin = 10;
     
     stickerDisplayView.itemSize = CGSizeMake(lf_stickerSize, lf_stickerSize);
     stickerDisplayView.itemMargin = lf_stickerMargin;
-    stickerDisplayView.normalTitleColor = [UIColor whiteColor];
-    stickerDisplayView.selectTitleColor = [UIColor colorWithRed:52/255.0 green:230/255.0 blue:92/255.0 alpha:1.0];
+    stickerDisplayView.normalTitleColor = [UIColor colorTextWhite];
+    stickerDisplayView.selectTitleColor = [UIColor colorPrimary];
     stickerDisplayView.normalImage = [NSBundle LFME_imageNamed:@"StickerDisplayPlaceholder.png"];
     stickerDisplayView.failureImage = [NSBundle LFME_imageNamed:@"StickerDisplayFail.png"];
     

@@ -8,6 +8,7 @@
 
 #import "LFVideoClipToolbar.h"
 #import "LFMediaEditingHeader.h"
+#import "LFMediaEditingController-Swift.h"
 
 @interface LFVideoClipToolbar ()
 
@@ -28,7 +29,7 @@
 
 - (void)customInit
 {
-    self.oKButtonTitleColorNormal = [UIColor colorWithRed:(26/255.0) green:(178/255.0) blue:(10/255.0) alpha:1.0];
+    self.oKButtonTitleColorNormal = [UIColor colorPrimary];
     
     CGFloat rgb = 34 / 255.0;
     self.backgroundColor = [UIColor colorWithRed:rgb green:rgb blue:rgb alpha:0.7];
