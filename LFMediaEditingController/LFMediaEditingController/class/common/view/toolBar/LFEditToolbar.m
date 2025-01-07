@@ -658,6 +658,8 @@ NSUInteger kToolbar_MaxItems = 6;
             [self changedButton:button];
         }
         default:
+            [self changedButton:_selectButton];
+            [self showMenuView:self.selectMenu];
             break;
     }
     if ([self.delegate respondsToSelector:@selector(lf_editToolbar:mainDidSelectAtIndex:)]) {

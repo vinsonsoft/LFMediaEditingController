@@ -615,12 +615,16 @@ LFPhotoEditOperationStringKey const LFPhotoEditCropExtraAspectRatioAttributeName
             break;
         case LFEditToolbarType_sticker:
         {
+            _EditingView.splashEnable = NO;
+            _EditingView.drawEnable = NO;
             [self singlePressed];
             [self changeStickerMenu:YES animated:YES];
         }
             break;
         case LFEditToolbarType_text:
         {
+            _EditingView.splashEnable = NO;
+            _EditingView.drawEnable = NO;
             [self showTextBarController:nil];
         }
             break;
@@ -634,12 +638,16 @@ LFPhotoEditOperationStringKey const LFPhotoEditCropExtraAspectRatioAttributeName
             break;
         case LFEditToolbarType_filter:
         {
+            _EditingView.splashEnable = NO;
+            _EditingView.drawEnable = NO;
             [self singlePressed];
             [self changeFilterMenu:YES animated:YES];
         }
             break;
         case LFEditToolbarType_crop:
         {
+            _EditingView.splashEnable = NO;
+            _EditingView.drawEnable = NO;
             [_EditingView setClipping:YES animated:YES];
             [self changeClipMenu:YES];
         }
