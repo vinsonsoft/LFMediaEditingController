@@ -624,9 +624,9 @@ NSUInteger kToolbar_MaxItems = 6;
 - (void)edit_toolBar_buttonClick:(UIButton *)button
 {
 
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"PodNotificationName"
-                                                        object:nil
-                                                      userInfo:@{@"key": @(button.tag)}];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"ToolBarButtonClickNotificationName"
+                                                        object:button
+                                                      userInfo:nil];
     switch (button.tag) {
         case LFEditToolbarType_draw:
         {
