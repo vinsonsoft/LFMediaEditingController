@@ -22,8 +22,7 @@
 #import "JRFilterBar.h"
 #import "FilterSuiteUtils.h"
 #import "AVAsset+LFMECommon.h"
-#import "LFMediaEditingController-Swift.h"
-
+#import "UIColor+CustomColors.h"
 #import "NSObject+LFTipsGuideView.h"
 
 /************************ Attributes ************************/

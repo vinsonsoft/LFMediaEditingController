@@ -8,7 +8,7 @@
 
 #import "LFClipToolbar.h"
 #import "LFMediaEditingHeader.h"
-#import "LFMediaEditingController-Swift.h"
+#import "UIColor+CustomColors.h"
 
 @interface LFClipToolbar ()
 {

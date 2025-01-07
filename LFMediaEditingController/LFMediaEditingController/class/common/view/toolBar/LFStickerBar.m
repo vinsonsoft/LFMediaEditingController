@@ -12,7 +12,7 @@
 #import "JRStickerDisplayView.h"
 #import <Photos/Photos.h>
 #import "LFImageCoder.h"
-#import "LFMediaEditingController-Swift.h"
+#import "UIColor+CustomColors.h"
 
 extern LFStickerContentStringKey const LFStickerContentCustomAlbum;
 

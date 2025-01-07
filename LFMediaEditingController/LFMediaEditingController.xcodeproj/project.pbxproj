@@ -134,7 +134,7 @@
 		C7E750F92119294F00022FCF /* LFColorMatrixType.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E750F82119294F00022FCF /* LFColorMatrixType.m */; };
 		C7ED893C20ABBC7100D37465 /* LFMEGIFImageSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ED893B20ABBC7100D37465 /* LFMEGIFImageSerialization.m */; };
 		DB8F6F6A2D2B6B8700EAD460 /* colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB8F6F692D2B6B8700EAD460 /* colors.xcassets */; };
-		DB8F6F6F2D2B6DB700EAD460 /* colors+extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8F6F6E2D2B6DB700EAD460 /* colors+extra.swift */; };
+		DBBE97062D2CAB100094F220 /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBE97052D2CAB100094F220 /* UIColor+CustomColors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -387,7 +387,8 @@
 		C7ED893B20ABBC7100D37465 /* LFMEGIFImageSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFMEGIFImageSerialization.m; sourceTree = "<group>"; };
 		DB8F6F692D2B6B8700EAD460 /* colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = colors.xcassets; sourceTree = "<group>"; };
 		DB8F6F6B2D2B6DA100EAD460 /* LFMediaEditingController-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LFMediaEditingController-Bridging-Header.h"; sourceTree = "<group>"; };
-		DB8F6F6E2D2B6DB700EAD460 /* colors+extra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "colors+extra.swift"; sourceTree = "<group>"; };
+		DBBE97042D2CAAAB0094F220 /* UIColor+CustomColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColors.h"; sourceTree = "<group>"; };
+		DBBE97052D2CAB100094F220 /* UIColor+CustomColors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColors.m"; sourceTree = "<group>"; };
 		FF3A4B2DB54D1AAE766D45AE /* Pods-LFMediaEditingController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFMediaEditingController.debug.xcconfig"; path = "Target Support Files/Pods-LFMediaEditingController/Pods-LFMediaEditingController.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -904,7 +905,8 @@
 				6FAB0D341F27345600C1BCFD /* view */,
 				6FAB0D3E1F2735D800C1BCFD /* category */,
 				DB8F6F692D2B6B8700EAD460 /* colors.xcassets */,
-				DB8F6F6E2D2B6DB700EAD460 /* colors+extra.swift */,
+				DBBE97042D2CAAAB0094F220 /* UIColor+CustomColors.h */,
+				DBBE97052D2CAB100094F220 /* UIColor+CustomColors.m */,
 				DB8F6F6B2D2B6DA100EAD460 /* LFMediaEditingController-Bridging-Header.h */,
 			);
 			path = common;
@@ -1464,6 +1466,7 @@
 				C72C395E236ACB04008C55B1 /* SPDropMenu.m in Sources */,
 				6F359B281F1CB662009F2035 /* LFVideoEditingView.m in Sources */,
 				3B32D1CF242B23AD005D0258 /* LFPaintBrush.m in Sources */,
+				DBBE97062D2CAB100094F220 /* UIColor+CustomColors.m in Sources */,
 				3B32D1D0242B23AD005D0258 /* LFStampBrush.m in Sources */,
 				C78B9C4F1FC54E2100D82F1F /* NaviViewController.m in Sources */,
 				C72C3960236ACB04008C55B1 /* SPBaseCollectionViewCell.m in Sources */,
@@ -1497,7 +1500,6 @@
 				C7E750F621183A5300022FCF /* LFImageUtil.m in Sources */,
 				C786A56B2325F4D400546B8C /* LFEasyNoticeBar.m in Sources */,
 				6F14E6451EE6439E0049AE56 /* LFPhotoEdit.m in Sources */,
-				DB8F6F6F2D2B6DB700EAD460 /* colors+extra.swift in Sources */,
 				3BC5BD4C24035BED00675877 /* LFStickerItem+View.m in Sources */,
 				3B86CC6124162B4000D6FA06 /* UIView+LFDownloadManager.m in Sources */,
 				3B8B0C6623E7C78500148D0B /* LFTextBar.m in Sources */,

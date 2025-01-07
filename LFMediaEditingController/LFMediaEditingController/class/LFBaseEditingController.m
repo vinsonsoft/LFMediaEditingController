@@ -11,8 +11,8 @@
 #import "UIDevice+LFMEOrientation.h"
 #import "LFEasyNoticeBar.h"
 #import "UIViewController+LFPresentation.h"
-#import "LFMediaEditingController-Swift.h"
 #import "LFBrushCache.h"
+#import "UIColor+CustomColors.h"
 
 @interface LFBaseEditingController ()
 {
