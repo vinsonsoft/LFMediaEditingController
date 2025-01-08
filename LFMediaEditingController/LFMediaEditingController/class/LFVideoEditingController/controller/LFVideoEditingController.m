@@ -590,12 +590,16 @@ LFVideoEditOperationStringKey const LFVideoEditClipMaxDurationAttributeName = @"
             break;
         case LFEditToolbarType_sticker:
         {
+            _EditingView.splashEnable = NO;
+            _EditingView.drawEnable = NO;
             [self singlePressed];
             [self changeStickerMenu:YES animated:YES];
         }
             break;
         case LFEditToolbarType_text:
         {
+            _EditingView.splashEnable = NO;
+            _EditingView.drawEnable = NO;
             [self showTextBarController:nil];
         }
             break;
@@ -610,23 +614,31 @@ LFVideoEditOperationStringKey const LFVideoEditClipMaxDurationAttributeName = @"
         case LFEditToolbarType_audio:
         {
             /** 音轨编辑UI */
+            _EditingView.splashEnable = NO;
+            _EditingView.drawEnable = NO;
             [self showAudioTrackBar];
         }
             break;
         case LFEditToolbarType_filter:
         {
+            _EditingView.splashEnable = NO;
+            _EditingView.drawEnable = NO;
             [self singlePressed];
             [self changeFilterMenu:YES animated:YES];
         }
             break;
         case LFEditToolbarType_clip:
         {
+            _EditingView.splashEnable = NO;
+            _EditingView.drawEnable = NO;
             [_EditingView setIsClipping:YES animated:YES];
             [self changeClipMenu:YES];
         }
             break;
         case LFEditToolbarType_rate:
         {
+            _EditingView.splashEnable = NO;
+            _EditingView.drawEnable = NO;
             editToolbar.rate = _EditingView.rate;
         }
             break;
