@@ -11,7 +11,7 @@
 #import "UIView+LFMECommon.h"
 #import "UIView+LFMEFrame.h"
 #import "LFMediaEditingHeader.h"
-
+#import "UIColor+CustomColors.h"
 /** 编辑功能 */
 #import "LFDrawView.h"
 #import "LFStickerView.h"
@@ -133,7 +133,66 @@ NSString *const kLFVideoCLippingViewData_filter = @"LFVideoCLippingViewData_filt
         self.lf_drawView = self.drawView;
         self.lf_stickerView = self.stickerView;
     }
+    /** Play and Pause Buttons */
+    [self setupPlayPauseButtons];
 }
+
+- (void)setupPlayPauseButtons
+{
+    // Create play button
+    self.playButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.playButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.playButton addTarget:self action:@selector(playButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    self.playButton.translatesAutoresizingMaskIntoConstraints = NO;  // Disable Autoresizing Mask
+    self.playButton.backgroundColor = [UIColor colorIcon];
+    self.playButton.layer.cornerRadius = 35; // Make it round
+    self.playButton.clipsToBounds = YES; // Ensure the contents are clipped within the rounded boundary
+
+    // Create pause button
+    self.pauseButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.pauseButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.pauseButton addTarget:self action:@selector(pauseButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    self.pauseButton.translatesAutoresizingMaskIntoConstraints = NO;  // Disable Autoresizing Mask
+    self.pauseButton.backgroundColor = [UIColor colorIcon];
+    self.pauseButton.layer.cornerRadius = 35; // Make it round
+    self.pauseButton.clipsToBounds = YES; // Ensure the contents are clipped within the rounded boundary
+    
+    [self.playButton setImage:bundleEditImageNamed(@"ic_play_icon.png") forState:UIControlStateNormal];
+    [self.pauseButton setImage:bundleEditImageNamed(@"ic_pause_icon.png") forState:UIControlStateNormal];
+    
+    // Add the buttons to the view
+    [self addSubview:self.playButton];
+    [self addSubview:self.pauseButton];
+
+    // Bring buttons to the front of the view hierarchy to make sure they aren't hidden behind other views
+    [self bringSubviewToFront:self.playButton];
+    [self bringSubviewToFront:self.pauseButton];
+    
+    // Add Auto Layout Constraints
+
+    // Center the Play Button
+    [NSLayoutConstraint activateConstraints:@[
+        [self.playButton.centerXAnchor constraintEqualToAnchor:self.centerXAnchor], // Horizontally center
+        [self.playButton.centerYAnchor constraintEqualToAnchor:self.centerYAnchor], // Vertically center
+        [self.playButton.widthAnchor constraintEqualToConstant:70],  // Width of the button
+        [self.playButton.heightAnchor constraintEqualToConstant:70]  // Height of the button
+    ]];
+
+    // Center the Pause Button
+    [NSLayoutConstraint activateConstraints:@[
+        [self.pauseButton.centerXAnchor constraintEqualToAnchor:self.centerXAnchor], // Horizontally center
+        [self.pauseButton.centerYAnchor constraintEqualToAnchor:self.centerYAnchor], // Vertically center
+        [self.pauseButton.widthAnchor constraintEqualToConstant:70],  // Width of the button
+        [self.pauseButton.heightAnchor constraintEqualToConstant:70]  // Height of the button
+    ]];
+    // Initially, hide pause button since video is not playing
+    self.pauseButton.hidden = YES;
+    // Force layout updates
+    [self setNeedsLayout];
+    [self layoutIfNeeded];
+}
+
+
 
 - (void)dealloc
 {
@@ -143,6 +202,29 @@ NSString *const kLFVideoCLippingViewData_filter = @"LFVideoCLippingViewData_filt
     self.playerView = nil;
     // 释放LFEditingProtocol协议
     [self clearProtocolxecutor];
+}
+
+- (void)playButtonTapped:(UIButton *)sender
+{
+    if ([self isPlaying]) {
+        // If the video is already playing, do nothing or you can add logic to toggle
+        return;
+    }
+
+    // Play the video from the current start time
+    [self playVideo];
+    
+    // Optionally hide the Play button and show the Pause button if you have visibility logic
+    self.playButton.hidden = YES;
+    self.pauseButton.hidden = NO;
+}
+
+
+- (void)pauseButtonTapped:(UIButton *)sender
+{
+    [self pauseVideo];
+    self.playButton.hidden = NO;
+    self.pauseButton.hidden = YES;
 }
 
 - (void)setVideoAsset:(AVAsset *)asset placeholderImage:(UIImage *)image
@@ -215,6 +297,9 @@ NSString *const kLFVideoCLippingViewData_filter = @"LFVideoCLippingViewData_filt
     if ([self.clipDelegate respondsToSelector:@selector(lf_videoClippingViewPlay:)]) {
         [self.clipDelegate lf_videoClippingViewPlay:self];
     }
+    
+    self.playButton.hidden = YES;
+    self.pauseButton.hidden = NO;
 }
 
 /** 暂停 */
@@ -224,6 +309,9 @@ NSString *const kLFVideoCLippingViewData_filter = @"LFVideoCLippingViewData_filt
     if ([self.clipDelegate respondsToSelector:@selector(lf_videoClippingViewPause:)]) {
         [self.clipDelegate lf_videoClippingViewPause:self];
     }
+    
+    self.playButton.hidden = NO;
+    self.pauseButton.hidden = YES;
 }
 
 /** 静音原音 */
@@ -359,7 +447,7 @@ NSString *const kLFVideoCLippingViewData_filter = @"LFVideoCLippingViewData_filt
     }
     _totalDuration = duration;
     self.videoPlayer.muteOriginalSound = self.muteOriginal;
-    [self playVideo];
+//    [self playVideo];
     if ([self.clipDelegate respondsToSelector:@selector(lf_videoClippingViewReadyToPlay:)]) {
         [self.clipDelegate lf_videoClippingViewReadyToPlay:self];
     }
@@ -371,7 +459,7 @@ NSString *const kLFVideoCLippingViewData_filter = @"LFVideoCLippingViewData_filt
     if ([self.clipDelegate respondsToSelector:@selector(lf_videoClippingViewPlayToEndTime:)]) {
         [self.clipDelegate lf_videoClippingViewPlayToEndTime:self];
     }
-    [self playVideo];
+//    [self playVideo];
 }
 /** 错误回调 */
 - (void)LFVideoPlayerFailedToPrepare:(LFVideoPlayer *)player error:(NSError *)error

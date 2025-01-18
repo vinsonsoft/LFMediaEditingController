@@ -21,4 +21,14 @@
     return [UIColor colorNamed:@"colorTextWhite(FFFFFF)" inBundle:nil compatibleWithTraitCollection:nil];
 }
 
++ (UIColor *)colorComponentBg {
+    // This method assumes you have a color in your asset catalog named "colorTextWhite(FFFFFF)"
+    return [UIColor colorNamed:@"colorComponentBg(F5F5F5)" inBundle:nil compatibleWithTraitCollection:nil];
+}
+
++ (UIColor *)colorIcon {
+    // This method assumes you have a color in your asset catalog named "colorTextWhite(FFFFFF)"
+    return [UIColor colorNamed:@"colorIcon(DADAE1)" inBundle:nil compatibleWithTraitCollection:nil];
+}
+
 @end

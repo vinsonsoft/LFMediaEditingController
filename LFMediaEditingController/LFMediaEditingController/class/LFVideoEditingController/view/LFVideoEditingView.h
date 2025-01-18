@@ -33,6 +33,9 @@
 /** 播放速率 (0.5~2.0) 值为0则禁止播放，默认1 */
 @property (nonatomic, assign) float rate;
 
+- (void)hideButtons;
+- (void)showButtons;
+
 /** 取消剪辑 */
 - (void)cancelClipping:(BOOL)animated;
 

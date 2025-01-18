@@ -19,6 +19,8 @@
 
 @property (nonatomic, weak) id<LFVideoClippingViewDelegate> _Nullable clipDelegate;
 
+@property (nonatomic, strong) UIButton *playButton;
+@property (nonatomic, strong) UIButton *pauseButton;
 
 /** 开始播放时间 */
 @property (nonatomic, assign) double startTime;

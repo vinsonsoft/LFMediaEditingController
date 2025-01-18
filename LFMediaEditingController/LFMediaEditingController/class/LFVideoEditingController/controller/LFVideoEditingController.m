@@ -503,6 +503,12 @@ LFVideoEditOperationStringKey const LFVideoEditClipMaxDurationAttributeName = @"
         [self changedBarStateWithAnimated:animated];
     }
 }
+- (void)pauseVideo
+{
+    [_EditingView pauseVideo];
+    
+}
+
 - (void)cancelButtonClick
 {
     [_EditingView pauseVideo];
@@ -541,7 +547,7 @@ LFVideoEditOperationStringKey const LFVideoEditClipMaxDurationAttributeName = @"
                         [[AVAudioSession sharedInstance] setActive:NO withOptions:AVAudioSessionSetActiveOptionNotifyOthersOnDeactivation error:nil];
                         if ([weakSelf.delegate respondsToSelector:@selector(lf_VideoEditingController:didFinishPhotoEdit:)]) {
                             [weakSelf.delegate lf_VideoEditingController:weakSelf didFinishPhotoEdit:videoEdit];
-                        }                        
+                        }
                     }
                     [weakSelf hideProgressHUD];
                 } progress:^(float progress) {
@@ -938,6 +944,10 @@ LFVideoEditOperationStringKey const LFVideoEditClipMaxDurationAttributeName = @"
             CGFloat alpha = self->_isHideNaviBar ? 0.f : 1.f;
             self->_edit_naviBar.alpha = alpha;
             self->_edit_toolBar.alpha = alpha;
+        }];
+        
+        [UIView animateWithDuration:.25f animations:^{
+            self->_isHideNaviBar ? [self->_EditingView hideButtons] : [self->_EditingView showButtons];
         }];
     } else {
         CGFloat alpha = _isHideNaviBar ? 0.f : 1.f;

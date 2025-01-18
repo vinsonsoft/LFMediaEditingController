@@ -241,7 +241,7 @@ typedef NS_ENUM(NSUInteger, LFVideoEditOperationSubType) {
 
 /** 代理 */
 @property (nonatomic, weak) id<LFVideoEditingControllerDelegate> delegate;
-
+- (void)pauseVideo;
 #pragma mark - deprecated
 /** 允许剪辑的最小时长 1秒 */
 @property (nonatomic, assign) double minClippingDuration __deprecated_msg("property deprecated. Use `operationAttrs[LFVideoEditClipMinDurationAttributeName]`");

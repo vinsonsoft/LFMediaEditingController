@@ -15,7 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (UIColor *)colorPrimary;
 + (UIColor *)colorTextWhite;
-
++ (UIColor *)colorComponentBg;
++ (UIColor *)colorIcon;
 @end
 
 NS_ASSUME_NONNULL_END
