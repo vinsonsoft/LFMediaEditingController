@@ -213,7 +213,7 @@ typedef NS_ENUM(NSUInteger, LFVideoEditOperationSubType) {
  Set edit object -> re-edit
  */
 - (void)setVideoEdit:(LFVideoEdit *)videoEdit;
-
+- (void)finishButtonClick;
 /**
  设置操作类型
  The type of operation.

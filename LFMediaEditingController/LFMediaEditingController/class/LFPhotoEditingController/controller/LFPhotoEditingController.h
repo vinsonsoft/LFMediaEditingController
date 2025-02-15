@@ -240,6 +240,7 @@ typedef NS_ENUM(NSUInteger, LFPhotoEditOperationSubType) {
  */
 - (void)setPhotoEdit:(LFPhotoEdit *)photoEdit;
 
+- (void)finishButtonClick;
 /**
  设置操作类型
  The type of operation.
