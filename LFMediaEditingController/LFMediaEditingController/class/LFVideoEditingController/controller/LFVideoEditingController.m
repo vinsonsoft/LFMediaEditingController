@@ -936,6 +936,14 @@ LFVideoEditOperationStringKey const LFVideoEditClipMaxDurationAttributeName = @"
 }
 - (void)changedBarStateWithAnimated:(BOOL)animated
 {
+    CGFloat naviBarAlpha = self.isHideNaviBar ? 0.f : 1.f;
+    NSDictionary *userInfo = @{ @"naviBarAlpha": @(naviBarAlpha),
+                                @"animated": @(animated)};
+
+    // Post the notification with the userInfo dictionary
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"BarStateChangedNotificationName"
+                                                        object:nil
+                                                      userInfo:userInfo];
     lf_me_dispatch_cancel(self.delayCancelBlock);
     /** 隐藏贴图菜单 */
     [self changeStickerMenu:NO animated:animated];
