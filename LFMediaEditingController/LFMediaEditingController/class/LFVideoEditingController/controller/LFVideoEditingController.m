@@ -289,6 +289,9 @@ LFVideoEditOperationStringKey const LFVideoEditClipMaxDurationAttributeName = @"
 
 - (void)configCustomNaviBar
 {
+    if (self.hideCustomNavBar) {
+        return;
+    }
     CGFloat margin = 5, topbarHeight = 0;
     if (@available(iOS 11.0, *)) {
         topbarHeight = kCustomTopbarHeight_iOS11;

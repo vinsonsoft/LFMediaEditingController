@@ -202,6 +202,7 @@ typedef NS_ENUM(NSUInteger, LFVideoEditOperationSubType) {
 /** 编辑视频 */
 @property (nonatomic, readonly) UIImage *placeholderImage;
 @property (nonatomic, readonly) AVAsset *asset;
+@property (nonatomic, readonly) BOOL *hideCustomNavBar;
 /**
  设置编辑图片->重新初始化
  Set edit photo -> init
@@ -214,6 +215,7 @@ typedef NS_ENUM(NSUInteger, LFVideoEditOperationSubType) {
  */
 - (void)setVideoEdit:(LFVideoEdit *)videoEdit;
 - (void)finishButtonClick;
+
 /**
  设置操作类型
  The type of operation.

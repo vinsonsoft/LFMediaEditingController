@@ -290,6 +290,9 @@ LFPhotoEditOperationStringKey const LFPhotoEditCropExtraAspectRatioAttributeName
 
 - (void)configCustomNaviBar
 {
+    if (self.hideCustomNavBar) {
+        return;
+    }
     CGFloat margin = 8, topbarHeight = 0;
     if (@available(iOS 11.0, *)) {
         topbarHeight = kCustomTopbarHeight_iOS11;
