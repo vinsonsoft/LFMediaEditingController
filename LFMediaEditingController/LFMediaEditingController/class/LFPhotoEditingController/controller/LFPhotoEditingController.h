@@ -223,7 +223,7 @@ typedef NS_ENUM(NSUInteger, LFPhotoEditOperationSubType) {
  Set edit photo -> init
  */
 @property (nonatomic, strong) UIImage *editImage;
-@property (nonatomic, readwrite) BOOL *hideCustomNavBar;
+@property (nonatomic, readwrite) BOOL hideCustomNavBar;
 /**
  对GIF而言。editImage的每帧持续间隔是平均分配的，durations的每帧持续间隔是真实的。同时也会影响到最终生成的GIF数据。
  
