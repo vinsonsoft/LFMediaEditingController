@@ -657,6 +657,7 @@ NSUInteger kToolbar_MaxItems = 6;
             [self showMenuView:self.edit_rateMenu];
             [self changedButton:button];
         }
+            break;
         default:
             [self changedButton:_selectButton];
             [self showMenuView:self.selectMenu];
