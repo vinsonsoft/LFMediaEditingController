@@ -1055,7 +1055,17 @@ LFVideoEditOperationStringKey const LFVideoEditClipMaxDurationAttributeName = @"
         textBar.cancelButtonTitleColorNormal = self.cancelButtonTitleColorNormal;
         textBar.oKButtonTitle = [NSBundle LFME_localizedStringForKey:@"_LFME_oKButtonTitle"];
         textBar.cancelButtonTitle = [NSBundle LFME_localizedStringForKey:@"_LFME_cancelButtonTitle"];
-        textBar.customTopbarHeight = self->_edit_naviBar.lfme_height;
+        if (self->_hideCustomNavBar) {
+            CGFloat topbarHeight = 0;
+            if (@available(iOS 11.0, *)) {
+                topbarHeight = kCustomTopbarHeight_iOS11;
+            } else {
+                topbarHeight = kCustomTopbarHeight;
+            }
+            textBar.customTopbarHeight = topbarHeight;
+        } else {
+            textBar.customTopbarHeight = self->_edit_naviBar.lfme_height;
+        }
         textBar.naviHeight = CGRectGetHeight(self.navigationController.navigationBar.frame);
     }];
     textBar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -1109,7 +1119,17 @@ LFVideoEditOperationStringKey const LFVideoEditClipMaxDurationAttributeName = @"
         audioTrackBar.cancelButtonTitleColorNormal = self.cancelButtonTitleColorNormal;
         audioTrackBar.oKButtonTitle = [NSBundle LFME_localizedStringForKey:@"_LFME_oKButtonTitle"];
         audioTrackBar.cancelButtonTitle = [NSBundle LFME_localizedStringForKey:@"_LFME_cancelButtonTitle"];
-        audioTrackBar.customTopbarHeight = self->_edit_naviBar.lfme_height;
+        if (self->_hideCustomNavBar) {
+            CGFloat topbarHeight = 0;
+            if (@available(iOS 11.0, *)) {
+                topbarHeight = kCustomTopbarHeight_iOS11;
+            } else {
+                topbarHeight = kCustomTopbarHeight;
+            }
+            audioTrackBar.customTopbarHeight = topbarHeight;
+        } else {
+            audioTrackBar.customTopbarHeight = self->_edit_naviBar.lfme_height;
+        }
         audioTrackBar.naviHeight = CGRectGetHeight(self.navigationController.navigationBar.frame);
         if (@available(iOS 11.0, *)) {
             audioTrackBar.customToolbarHeight = 44.f+self.navigationController.view.safeAreaInsets.bottom;

@@ -264,7 +264,7 @@ LFPhotoEditOperationStringKey const LFPhotoEditCropExtraAspectRatioAttributeName
             NSInteger index = 0;
             if (_EditingView.extraAspectRatioList) {
                 if (subType >= 500) {
-                    index = subType % 500 + 1;                    
+                    index = subType % 500 + 1;
                 }
             } else {
                 switch (subType) {
@@ -856,7 +856,7 @@ LFPhotoEditOperationStringKey const LFPhotoEditCropExtraAspectRatioAttributeName
             alertController.modalPresentationStyle = UIModalPresentationPopover;
             UIPopoverPresentationController *presentationController = [alertController popoverPresentationController];
             presentationController.sourceView = clipToolbar;
-            presentationController.sourceRect = clipToolbar.clickViewRect;            
+            presentationController.sourceRect = clipToolbar.clickViewRect;
         }
         [self presentViewController:alertController animated:YES completion:nil];
     }
@@ -1217,7 +1217,7 @@ LFPhotoEditOperationStringKey const LFPhotoEditCropExtraAspectRatioAttributeName
                 self->_edit_clipping_toolBar.alpha = 0.f;
             } completion:^(BOOL finished) {
                 [self->_edit_clipping_toolBar removeFromSuperview];
-            }];            
+            }];
         } else {
             [_edit_clipping_toolBar removeFromSuperview];
         }
@@ -1304,7 +1304,17 @@ LFPhotoEditOperationStringKey const LFPhotoEditCropExtraAspectRatioAttributeName
         textBar.cancelButtonTitleColorNormal = self.cancelButtonTitleColorNormal;
         textBar.oKButtonTitle = [NSBundle LFME_localizedStringForKey:@"_LFME_oKButtonTitle"];
         textBar.cancelButtonTitle = [NSBundle LFME_localizedStringForKey:@"_LFME_cancelButtonTitle"];
-        textBar.customTopbarHeight = self->_edit_naviBar.lfme_height;
+        if (self->_hideCustomNavBar) {
+            CGFloat topbarHeight = 0;
+            if (@available(iOS 11.0, *)) {
+                topbarHeight = kCustomTopbarHeight_iOS11;
+            } else {
+                topbarHeight = kCustomTopbarHeight;
+            }
+            textBar.customTopbarHeight = topbarHeight;
+        } else {
+            textBar.customTopbarHeight = self->_edit_naviBar.lfme_height;
+        }
         textBar.naviHeight = CGRectGetHeight(self.navigationController.navigationBar.frame);
     }];
     textBar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
