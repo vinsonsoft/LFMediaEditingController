@@ -555,3 +555,4 @@ CGFloat const LFTextBarAlignmentTag = 221;
     [self setTextColor:color];
 }
 @end
+
