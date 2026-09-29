@@ -23,8 +23,16 @@
 /** Navigation bar height. Falls back to 44 when there is no navigation controller (e.g. hosted from SwiftUI) or the bar reports a zero frame. */
 #define kNaviBarHeight ({ CGFloat __h = CGRectGetHeight(self.navigationController.navigationBar.frame); __h > 0 ? __h : 44.f; })
 #define kCustomTopbarHeight kNaviBarHeight + CGRectGetHeight([UIApplication sharedApplication].statusBarFrame)
-/** Uses self.view's own safe area: if the host already insets the view (SwiftUI container), the top bar must not add the inset again. */
-#define kCustomTopbarHeight_iOS11 kNaviBarHeight + self.view.safeAreaInsets.top
+/** Distance from the top of self.view to the bottom of the status bar / notch, measured from the window so that hidden or transparent navigation bars (UIKit or SwiftUI) and host-side safe-area insets do not shift the custom top bar. Falls back to the view's own safe area before the view is in a window. */
+#define kLFTopSafeInset ({ \
+    CGFloat __top = self.view.safeAreaInsets.top; \
+    UIWindow *__window = self.view.window; \
+    if (__window) { \
+        CGFloat __viewY = [self.view convertPoint:CGPointZero toView:__window].y; \
+        __top = MAX(0, __window.safeAreaInsets.top - __viewY); \
+    } \
+    __top; })
+#define kCustomTopbarHeight_iOS11 kNaviBarHeight + kLFTopSafeInset
 #define hasSafeArea ([[UIApplication sharedApplication] delegate].window.safeAreaInsets.bottom > 0)
 
 #define kSliderColors @[[UIColor whiteColor]/*白色*/\
