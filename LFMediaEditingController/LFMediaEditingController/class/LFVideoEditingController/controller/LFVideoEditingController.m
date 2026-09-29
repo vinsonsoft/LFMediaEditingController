@@ -298,7 +298,7 @@ LFVideoEditOperationStringKey const LFVideoEditClipMaxDurationAttributeName = @"
     } else {
         topbarHeight = kCustomTopbarHeight;
     }
-    CGFloat naviHeight = CGRectGetHeight(self.navigationController.navigationBar.frame);
+    CGFloat naviHeight = kNaviBarHeight;
     
     _edit_naviBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.lfme_width, topbarHeight)];
     _edit_naviBar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
@@ -1066,7 +1066,7 @@ LFVideoEditOperationStringKey const LFVideoEditClipMaxDurationAttributeName = @"
         } else {
             textBar.customTopbarHeight = self->_edit_naviBar.lfme_height;
         }
-        textBar.naviHeight = CGRectGetHeight(self.navigationController.navigationBar.frame);
+        textBar.naviHeight = kNaviBarHeight;
     }];
     textBar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     textBar.showText = text;
@@ -1130,7 +1130,7 @@ LFVideoEditOperationStringKey const LFVideoEditClipMaxDurationAttributeName = @"
         } else {
             audioTrackBar.customTopbarHeight = self->_edit_naviBar.lfme_height;
         }
-        audioTrackBar.naviHeight = CGRectGetHeight(self.navigationController.navigationBar.frame);
+        audioTrackBar.naviHeight = kNaviBarHeight;
         if (@available(iOS 11.0, *)) {
             audioTrackBar.customToolbarHeight = 44.f+self.navigationController.view.safeAreaInsets.bottom;
         } else {

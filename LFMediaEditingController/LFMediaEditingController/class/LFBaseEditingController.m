@@ -26,6 +26,8 @@
 }
 /** 默认编辑屏幕方向 */
 @property (nonatomic, assign) UIInterfaceOrientation orientation;
+/** 记录进入前导航栏的显示状态，离开时恢复 */
+@property (nonatomic, assign) BOOL lf_navigationBarWasHidden;
 
 
 @end
@@ -73,6 +75,13 @@
     [super viewWillAppear:animated];
     // 隐藏状态栏而不改变安全区域的高度
     [UIApplication sharedApplication].keyWindow.windowLevel = UIWindowLevelStatusBar + 1;
+    /** The system navigation bar overlaps the custom Cancel/OK bar and swallows its touches (it is fully transparent on iOS 26). Hide it here instead of relying on the host to do it. */
+    if (self.navigationController && !self.navigationController.navigationBarHidden) {
+        self.lf_navigationBarWasHidden = NO;
+        [self.navigationController setNavigationBarHidden:YES animated:animated];
+    } else {
+        self.lf_navigationBarWasHidden = YES;
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -92,6 +101,9 @@
 {
     [super viewWillDisappear:animated];
     [UIApplication sharedApplication].keyWindow.windowLevel = UIWindowLevelNormal;
+    if (!self.lf_navigationBarWasHidden) {
+        [self.navigationController setNavigationBarHidden:NO animated:animated];
+    }
     if (@available(iOS 13.0, *)) {
         // 重新开启下拉手势
         self.lf_dropShadowPanGestureRecognizer.enabled = YES;

@@ -95,6 +95,12 @@
         if (layoutBlock) {
             layoutBlock(self);
         }
+        if (_naviHeight <= 0) {
+            _naviHeight = 44.f;
+        }
+        if (_customTopbarHeight < _naviHeight) {
+            _customTopbarHeight = _naviHeight;
+        }
         [self customInit];
     }
     return self;

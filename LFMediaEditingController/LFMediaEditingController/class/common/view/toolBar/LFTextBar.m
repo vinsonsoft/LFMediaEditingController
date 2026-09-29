@@ -57,6 +57,13 @@ CGFloat const LFTextBarAlignmentTag = 221;
         if (layoutBlock) {
             layoutBlock(self);
         }
+        /** Guard against zero/invalid heights (no navigation controller, or layout not done yet): otherwise Cancel/OK get a 0pt-tall frame and can never be tapped. */
+        if (_naviHeight <= 0) {
+            _naviHeight = 44.f;
+        }
+        if (_customTopbarHeight < _naviHeight) {
+            _customTopbarHeight = _naviHeight;
+        }
         [self customInit];
     }
     return self;
@@ -392,26 +399,35 @@ CGFloat const LFTextBarAlignmentTag = 221;
 }
 
 #pragma mark - 键盘通知出来方法
-- (void)keyboardWillShow:(NSNotification *)notification
+- (void)layoutKeyboardBarWithNotification:(NSNotification *)notification
 {
     CGRect keyboardRect = [[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
     double duration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     
+    /** The keyboard frame is in screen coordinates. If this view does not cover the whole screen (e.g. the host insets it by the safe area), using its height directly leaves a gap between the color bar and the keyboard, so convert the frame into our own coordinate space first. */
+    CGFloat keyboardTop = self.lfme_height;
+    if (self.window) {
+        CGRect rectInWindow = [self.window convertRect:keyboardRect fromWindow:nil];
+        CGRect rectInSelf = [self convertRect:rectInWindow fromView:self.window];
+        keyboardTop = MIN(self.lfme_height, CGRectGetMinY(rectInSelf));
+    } else {
+        keyboardTop = self.lfme_height - CGRectGetHeight(keyboardRect);
+    }
+    
     [UIView animateWithDuration:duration animations:^{
-        self.lf_keyboardBar.lfme_y = self.lfme_height-CGRectGetHeight(keyboardRect)-CGRectGetHeight(self.lf_keyboardBar.frame);
+        self.lf_keyboardBar.lfme_y = keyboardTop - CGRectGetHeight(self.lf_keyboardBar.frame);
         self.lf_textView.lfme_height = self.lfme_height-self.lf_keyboardBar.lfme_y;
     }];
 }
 
+- (void)keyboardWillShow:(NSNotification *)notification
+{
+    [self layoutKeyboardBarWithNotification:notification];
+}
+
 - (void)keyboardWillHide:(NSNotification *)notification
 {
-    CGRect keyboardRect = [[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
-    double duration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    
-    [UIView animateWithDuration:duration animations:^{
-        self.lf_keyboardBar.lfme_y = self.lfme_height-CGRectGetHeight(keyboardRect)-CGRectGetHeight(self.lf_keyboardBar.frame);
-        self.lf_textView.lfme_height = self.lfme_height-self.lf_keyboardBar.lfme_y;
-    }];
+    [self layoutKeyboardBarWithNotification:notification];
 }
 
 

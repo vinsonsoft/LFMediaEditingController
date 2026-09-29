@@ -20,8 +20,11 @@
 #define bundleAudioTrackImageNamed(name) [NSBundle LFME_audioTrackImageNamed:name]
 #define bundleBrushImageNamed(name) [NSBundle LFME_brushImageNamed:name]
 
-#define kCustomTopbarHeight CGRectGetHeight(self.navigationController.navigationBar.frame) + CGRectGetHeight([UIApplication sharedApplication].statusBarFrame)
-#define kCustomTopbarHeight_iOS11 CGRectGetHeight(self.navigationController.navigationBar.frame) + self.navigationController.view.safeAreaInsets.top
+/** Navigation bar height. Falls back to 44 when there is no navigation controller (e.g. hosted from SwiftUI) or the bar reports a zero frame. */
+#define kNaviBarHeight ({ CGFloat __h = CGRectGetHeight(self.navigationController.navigationBar.frame); __h > 0 ? __h : 44.f; })
+#define kCustomTopbarHeight kNaviBarHeight + CGRectGetHeight([UIApplication sharedApplication].statusBarFrame)
+/** Uses self.view's own safe area: if the host already insets the view (SwiftUI container), the top bar must not add the inset again. */
+#define kCustomTopbarHeight_iOS11 kNaviBarHeight + self.view.safeAreaInsets.top
 #define hasSafeArea ([[UIApplication sharedApplication] delegate].window.safeAreaInsets.bottom > 0)
 
 #define kSliderColors @[[UIColor whiteColor]/*白色*/\
