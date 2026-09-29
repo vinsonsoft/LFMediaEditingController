@@ -75,8 +75,8 @@ UIKIT_EXTERN LFPhotoEditOperationStringKey const LFPhotoEditStickerAttributeName
  
  NSArray containing NSArray<LFStickerContent *>, default
  @[
-    [LFStickerContent stickerContentWithTitle:@"默认" contents:@[LFStickerContentDefaultSticker]],
-    [LFStickerContent stickerContentWithTitle:@"相册" contents:@[LFStickerContentAllAlbum]]
+    [LFStickerContent stickerContentWithTitle:@"Default" contents:@[LFStickerContentDefaultSticker]],
+    [LFStickerContent stickerContentWithTitle:@"Album" contents:@[LFStickerContentAllAlbum]]
  ].
  */
 UIKIT_EXTERN LFPhotoEditOperationStringKey const LFPhotoEditStickerContentsAttributeName;

@@ -97,7 +97,7 @@ CGFloat const JRPickColorView_magnifierView_Margin = 15.0f; //!放大镜距离�
     if (!isCreate) {
         [self createShowColorsContainer];
     } else {
-        NSCAssert(!isCreate, @"💩💩💩请给足够宽度显示选择器！！！💩💩💩");   
+        NSCAssert(!isCreate, @"Please provide enough width to display the color picker!");   
     }
 }
 

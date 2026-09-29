@@ -1296,7 +1296,7 @@
 				TargetAttributes = {
 					6F14E5CF1EE6438A0049AE56 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 3VDRUN62M8;
+						DevelopmentTeam = 98QYHH6CFG;
 						LastSwiftMigration = 1600;
 						ProvisioningStyle = Automatic;
 					};
@@ -1647,7 +1647,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 3VDRUN62M8;
+				DEVELOPMENT_TEAM = 98QYHH6CFG;
 				INFOPLIST_FILE = LFMediaEditingController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1667,7 +1667,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 3VDRUN62M8;
+				DEVELOPMENT_TEAM = 98QYHH6CFG;
 				INFOPLIST_FILE = LFMediaEditingController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

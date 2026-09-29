@@ -37,14 +37,14 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dzr-O3-Z8v">
                                 <rect key="frame" x="176" y="96" width="62" height="30"/>
-                                <state key="normal" title="图片编辑"/>
+                                <state key="normal" title="Edit Photo"/>
                                 <connections>
                                     <action selector="photoClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1gL-DO-Hvg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0I-o9-Rdf">
                                 <rect key="frame" x="176" y="185" width="62" height="30"/>
-                                <state key="normal" title="视频编辑"/>
+                                <state key="normal" title="Edit Video"/>
                                 <connections>
                                     <action selector="videoClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xhM-hR-yMR"/>
                                 </connections>

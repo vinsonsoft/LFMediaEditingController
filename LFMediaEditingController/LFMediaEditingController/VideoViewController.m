@@ -121,7 +121,7 @@
         if (self.player.status == AVPlayerStatusReadyToPlay) {
             [self.player play];
         } else {
-            NSLog(@"视频解析失败!");
+            NSLog(@"Video parsing failed!");
         }
     } else {
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];

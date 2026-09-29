@@ -352,7 +352,7 @@ CGFloat const LFTextBarAlignmentTag = 221;
 }
 - (void)font_buttonClick:(UIButton *)button
 {
-    NSLog(@"正在完善...");
+    NSLog(@"Work in progress...");
 }
 - (void)fontBG_buttonClick:(UIButton *)button
 {

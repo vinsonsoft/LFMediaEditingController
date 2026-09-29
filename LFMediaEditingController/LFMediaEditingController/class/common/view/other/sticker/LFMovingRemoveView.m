@@ -74,6 +74,8 @@
     label.textColor = [UIColor whiteColor];
     label.numberOfLines = 1;
     label.font = [UIFont systemFontOfSize:15.f];
+    label.adjustsFontSizeToFitWidth = YES;
+    label.minimumScaleFactor = 0.6f;
     [self addSubview:label];
     _label = label;
     

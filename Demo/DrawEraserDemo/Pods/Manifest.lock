@@ -1,0 +1,16 @@
+PODS:
+  - LFMediaEditingController/LFDrawView (1.4.3)
+
+DEPENDENCIES:
+  - LFMediaEditingController/LFDrawView
+
+SPEC REPOS:
+  trunk:
+    - LFMediaEditingController
+
+SPEC CHECKSUMS:
+  LFMediaEditingController: b65f5bb2348b4298913a10a598612769fb19f263
+
+PODFILE CHECKSUM: f43bc575b258620d7d90de6155f714f8ab5f7c1b
+
+COCOAPODS: 1.9.1

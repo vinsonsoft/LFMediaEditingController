@@ -88,7 +88,7 @@
 		1F542C9827BBCEB81DF86855A28DA6F7 /* LFFilterVideoExportSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFFilterVideoExportSession.m; path = LFFilterSuite/LFFilterSuite/class/LFExportSession/LFFilterVideoExportSession.m; sourceTree = "<group>"; };
 		20C1A3A290557D3D1DB50FA0466992B2 /* LFFilterImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFFilterImageView.h; path = LFFilterSuite/LFFilterSuite/class/LFFilterDisplayers/LFFilterImageView.h; sourceTree = "<group>"; };
 		2440CAEA2DE5F9883401E0FDA92D70C3 /* Pods-LFMediaEditingController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LFMediaEditingController.debug.xcconfig"; sourceTree = "<group>"; };
-		2764F7C5C6F3FF5AD9F186AD3364A6FF /* Pods-LFMediaEditingController */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-LFMediaEditingController"; path = Pods_LFMediaEditingController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2764F7C5C6F3FF5AD9F186AD3364A6FF /* Pods_LFMediaEditingController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LFMediaEditingController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		359FB882BDF4F111000FC785A4906155 /* LFFilterSuiteHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFFilterSuiteHeader.h; path = LFFilterSuite/LFFilterSuite/class/LFFilterSuiteHeader.h; sourceTree = "<group>"; };
 		38CBADC1A3EAD5E246BB671FC5A3ED35 /* LFFilterSuite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LFFilterSuite.release.xcconfig; sourceTree = "<group>"; };
 		41E2BD3B85DD7741C9D3284E541DE569 /* LFFilterImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFFilterImageView.m; path = LFFilterSuite/LFFilterSuite/class/LFFilterDisplayers/LFFilterImageView.m; sourceTree = "<group>"; };
@@ -107,12 +107,12 @@
 		6BD214BFE3D2820C454FDDD38F51F491 /* LFFilterSuite-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LFFilterSuite-Info.plist"; sourceTree = "<group>"; };
 		6E7B9C5C798990F4EF823FCA90577334 /* LFFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFFilter.m; path = LFFilterSuite/LFFilterSuite/class/LFFilter/LFFilter.m; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		8C4F341419C0E3EB0F36A5DDD746BF45 /* LFFilterSuite */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LFFilterSuite; path = LFFilterSuite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C4F341419C0E3EB0F36A5DDD746BF45 /* LFFilterSuite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LFFilterSuite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91D9536D59B96BB660E3E81FA15E86CB /* LFContextImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFContextImageView.h; path = LFFilterSuite/LFFilterSuite/class/LFFilterDisplayers/LFContextImageView.h; sourceTree = "<group>"; };
 		92D7404A41CD87147834BC889F3B9C2A /* LFWeakSelectorTarget.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFWeakSelectorTarget.h; path = LFFilterSuite/LFFilterSuite/class/LFFilterUtils/LFWeakSelectorTarget.h; sourceTree = "<group>"; };
 		9AD39F95D277BA4C0AEEF09ED55CCED2 /* Pods-LFMediaEditingController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LFMediaEditingController-Info.plist"; sourceTree = "<group>"; };
 		9B1F17C0BCF12E2C0A1155113531327B /* LFFilter+save.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "LFFilter+save.m"; path = "LFFilterSuite/LFFilterSuite/class/LFFilter/LFFilter+save.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9FAC9FE862286F2A732F1A37A996427E /* LFFilterVideoView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFFilterVideoView.m; path = LFFilterSuite/LFFilterSuite/class/LFFilterDisplayers/LFFilterVideoView.m; sourceTree = "<group>"; };
 		A09E445175E3D4453399A39771D95BF5 /* LFAssetExportSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFAssetExportSession.h; path = LFAssetExportSession/LFAssetExportSession/class/LFAssetExportSession.h; sourceTree = "<group>"; };
 		A2570D5C28A51DE4919CA5CF161A42BC /* LFFilter+UIImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "LFFilter+UIImage.h"; path = "LFFilterSuite/LFFilterSuite/class/LFFilter/LFFilter+UIImage.h"; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 		EB54D4476B75FBB782FDA610B2EC1EF7 /* LFFilter+Initialize.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "LFFilter+Initialize.h"; path = "LFFilterSuite/LFFilterSuite/class/LFFilter/LFFilter+Initialize.h"; sourceTree = "<group>"; };
 		EF09B8254011CB752DF642090E75C9DB /* LFFilterSuite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LFFilterSuite.debug.xcconfig; sourceTree = "<group>"; };
 		F1526D95863EDA1CE5C925E3E026058A /* Pods-LFMediaEditingController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LFMediaEditingController.modulemap"; sourceTree = "<group>"; };
-		F2A05E9B3BFAFADB03094F9FEB7B3878 /* LFAssetExportSession */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LFAssetExportSession; path = LFAssetExportSession.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2A05E9B3BFAFADB03094F9FEB7B3878 /* LFAssetExportSession.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LFAssetExportSession.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6963220DE132CFB619F91E0F1B27C2D /* LFMutableFilter+Initialize.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "LFMutableFilter+Initialize.h"; path = "LFFilterSuite/LFFilterSuite/class/LFFilter/LFMutableFilter+Initialize.h"; sourceTree = "<group>"; };
 		FA2D2C4AD798C44EF8A499D410D67CC8 /* LFMutableFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFMutableFilter.m; path = LFFilterSuite/LFFilterSuite/class/LFFilter/LFMutableFilter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,9 +168,9 @@
 		05D4BFCA315B5B864EAEFA3606C70C94 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F2A05E9B3BFAFADB03094F9FEB7B3878 /* LFAssetExportSession */,
-				8C4F341419C0E3EB0F36A5DDD746BF45 /* LFFilterSuite */,
-				2764F7C5C6F3FF5AD9F186AD3364A6FF /* Pods-LFMediaEditingController */,
+				F2A05E9B3BFAFADB03094F9FEB7B3878 /* LFAssetExportSession.framework */,
+				8C4F341419C0E3EB0F36A5DDD746BF45 /* LFFilterSuite.framework */,
+				2764F7C5C6F3FF5AD9F186AD3364A6FF /* Pods_LFMediaEditingController.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -237,7 +237,6 @@
 				5E6DDF9B00C2FC2482D432B8A0614A8E /* LFAssetExportSession.m */,
 				75B257664E95174EACFCC9BCE5FE07B7 /* Support Files */,
 			);
-			name = LFAssetExportSession;
 			path = LFAssetExportSession;
 			sourceTree = "<group>";
 		};
@@ -304,7 +303,6 @@
 				02586C9D85C687D0F337D6CBB252B435 /* LFWeakSelectorTarget.m */,
 				12CA8BFD2D218A18DF7A209979D9AD18 /* Support Files */,
 			);
-			name = LFFilterSuite;
 			path = LFFilterSuite;
 			sourceTree = "<group>";
 		};
@@ -379,7 +377,7 @@
 			);
 			name = LFAssetExportSession;
 			productName = LFAssetExportSession;
-			productReference = F2A05E9B3BFAFADB03094F9FEB7B3878 /* LFAssetExportSession */;
+			productReference = F2A05E9B3BFAFADB03094F9FEB7B3878 /* LFAssetExportSession.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		746FA6E17267B80AF0DBB86EA0606E6B /* Pods-LFMediaEditingController */ = {
@@ -399,7 +397,7 @@
 			);
 			name = "Pods-LFMediaEditingController";
 			productName = Pods_LFMediaEditingController;
-			productReference = 2764F7C5C6F3FF5AD9F186AD3364A6FF /* Pods-LFMediaEditingController */;
+			productReference = 2764F7C5C6F3FF5AD9F186AD3364A6FF /* Pods_LFMediaEditingController.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		8A76EB75C76F8FE5A66D530B9277D2A5 /* LFFilterSuite */ = {
@@ -418,7 +416,7 @@
 			);
 			name = LFFilterSuite;
 			productName = LFFilterSuite;
-			productReference = 8C4F341419C0E3EB0F36A5DDD746BF45 /* LFFilterSuite */;
+			productReference = 8C4F341419C0E3EB0F36A5DDD746BF45 /* LFFilterSuite.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -555,7 +553,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-LFMediaEditingController/Pods-LFMediaEditingController-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-LFMediaEditingController/Pods-LFMediaEditingController.modulemap";
@@ -589,7 +587,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/LFAssetExportSession/LFAssetExportSession-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/LFAssetExportSession/LFAssetExportSession-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/LFAssetExportSession/LFAssetExportSession.modulemap";
 				PRODUCT_MODULE_NAME = LFAssetExportSession;
@@ -621,7 +619,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-LFMediaEditingController/Pods-LFMediaEditingController-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-LFMediaEditingController/Pods-LFMediaEditingController.modulemap";
@@ -656,7 +654,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/LFFilterSuite/LFFilterSuite-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/LFFilterSuite/LFFilterSuite-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/LFFilterSuite/LFFilterSuite.modulemap";
 				PRODUCT_MODULE_NAME = LFFilterSuite;
@@ -791,8 +789,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -815,7 +812,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/LFAssetExportSession/LFAssetExportSession-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/LFAssetExportSession/LFAssetExportSession-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/LFAssetExportSession/LFAssetExportSession.modulemap";
 				PRODUCT_MODULE_NAME = LFAssetExportSession;
@@ -847,7 +844,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/LFFilterSuite/LFFilterSuite-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/LFFilterSuite/LFFilterSuite-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/LFFilterSuite/LFFilterSuite.modulemap";
 				PRODUCT_MODULE_NAME = LFFilterSuite;

@@ -12,7 +12,7 @@
 
 NSString *lf_colorMatrixName(LFColorMatrixType type)
 {
-    NSString *colorStr = @"原图";
+    NSString *colorStr = @"Original";
     switch (type) {
         case LFColorMatrixType_None:
             break;
@@ -20,52 +20,52 @@ NSString *lf_colorMatrixName(LFColorMatrixType type)
             colorStr = @"LOMO";
             break;
         case LFColorMatrixType_Heibai:
-            colorStr = @"黑白";
+            colorStr = @"B&W";
             break;
         case LFColorMatrixType_Fugu:
-            colorStr = @"复古";
+            colorStr = @"Vintage";
             break;
         case LFColorMatrixType_Gete:
-            colorStr = @"哥特";
+            colorStr = @"Gothic";
             break;
         case LFColorMatrixType_Ruise:
-            colorStr = @"锐化";
+            colorStr = @"Sharpen";
             break;
         case LFColorMatrixType_Danya:
-            colorStr = @"淡雅";
+            colorStr = @"Elegant";
             break;
         case LFColorMatrixType_Jiuhong:
-            colorStr = @"酒红";
+            colorStr = @"Wine";
             break;
         case LFColorMatrixType_Qingning:
-            colorStr = @"清宁";
+            colorStr = @"Serene";
             break;
         case LFColorMatrixType_Langman:
-            colorStr = @"浪漫";
+            colorStr = @"Romantic";
             break;
         case LFColorMatrixType_Huaijiu:
-            colorStr = @"怀旧";
+            colorStr = @"Nostalgia";
             break;
         case LFColorMatrixType_Landiao:
-            colorStr = @"蓝调";
+            colorStr = @"Blues";
             break;
         case LFColorMatrixType_Menghuan:
-            colorStr = @"梦幻";
+            colorStr = @"Dreamy";
             break;
         case LFColorMatrixType_Yese:
-            colorStr = @"夜色";
+            colorStr = @"Night";
             break;
         case LFColorMatrixType_Huidu:
-            colorStr = @"灰度";
+            colorStr = @"Grayscale";
             break;
         case LFColorMatrixType_Imagerevolve:
-            colorStr = @"高冷";
+            colorStr = @"Cool";
             break;
         case LFColorMatrixType_Heighsaturatedcolour:
-            colorStr = @"饱和";
+            colorStr = @"Saturated";
             break;
         case LFColorMatrixType_Cleancolor:
-            colorStr = @"去色";
+            colorStr = @"Desaturate";
             break;
     }
     return colorStr;

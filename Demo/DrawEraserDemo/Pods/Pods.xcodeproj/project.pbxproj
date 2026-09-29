@@ -1,0 +1,723 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13042FD251A6001ADF75F2AFB3DD0C20 /* LFEraserBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = D1861594A77A463CD54AA59324547764 /* LFEraserBrush.m */; };
+		14626E04066CB07C6257D4A08E815194 /* LFMediaEditingController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F517A77256EC8D99488CA36F42A690DD /* LFMediaEditingController-dummy.m */; };
+		2562C7A22D4306194E16A9C5A29DF4EA /* LFSmearBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B43EBB115D2E7C5E8CA26C303BE24A /* LFSmearBrush.m */; };
+		28CD605A5C8DE395752C7065757C9108 /* LFSmearBrush.h in Headers */ = {isa = PBXBuildFile; fileRef = 47D5ABA7A2FBA0C0326F4D026E542BC2 /* LFSmearBrush.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2961AA74261BEC0DBCA9D89D7701C007 /* Pods-DrawDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 94DD65D00B644A2796547A022A8BFF4A /* Pods-DrawDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D3D08B38BA1A3794B1CE505B14C76CA /* LFBrush.h in Headers */ = {isa = PBXBuildFile; fileRef = 87837B6D62F38F0A1B6A1A9A12B15E37 /* LFBrush.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E4C6F2DB7620ED67EA0EBDE49B26218 /* LFHighlightBrush.h in Headers */ = {isa = PBXBuildFile; fileRef = DA51F57DD4BA7116940C81CB2887D7B3 /* LFHighlightBrush.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		39437950106B98757F99F2197A421F65 /* LFFluorescentBrush.h in Headers */ = {isa = PBXBuildFile; fileRef = 03F7BC624C8F32EAC418CC7C37DD822F /* LFFluorescentBrush.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C0D2613BEFC19F163A6B556F052F124 /* LFEraserBrush.h in Headers */ = {isa = PBXBuildFile; fileRef = DA24E3F7D2440A19DA7F8BE25DD826F1 /* LFEraserBrush.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40E2570E75262A0565A6DFE8538E8CEA /* LFBrushCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 763A7A78C4405D49072D96A96A8F0E01 /* LFBrushCache.m */; };
+		4FD64BBD117D14D26D7D6C98FFE94137 /* Pods-DrawDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 320529B0DCA229BDE54A7DB340B9A6C3 /* Pods-DrawDemo-dummy.m */; };
+		6CA0B813FBD52558111C8D27FA45AC94 /* CALayer+LFBrush.h in Headers */ = {isa = PBXBuildFile; fileRef = CFF28A1BAC14B3A8F49D9434F80BE8F3 /* CALayer+LFBrush.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7424E42E5AF7AA01AE84F94A6D2A2251 /* LFFluorescentBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = 860E8170AE3610DE33ABB0766B8877CC /* LFFluorescentBrush.m */; };
+		74E6FFBA3C2E519E2EE10BA94676E5F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		7C2D37FFF637A7AA43AAD41D6CC48100 /* LFChalkBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = 3839CA81FE89DE7AE560A4921005F0BD /* LFChalkBrush.m */; };
+		82BB9E62A154C46058292AE66DB7DB10 /* LFBrushCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C267ED111885E3541245AEE9804B0B4 /* LFBrushCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82C308DF072A4980AAA7B5ECB3BE17A0 /* LFDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D5EA5514C44C23B2A28FEC76022636 /* LFDrawView.m */; };
+		8F2D6FA2E47DFD5ACD4498417DCA4D32 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		8F854B8548158EFF296ED0C72F8589BA /* LFBlurryBrush.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A86DB2D73E9DEF0462032B9F829309F /* LFBlurryBrush.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9291DD0EEDA08849E407FCF35E4C31E4 /* LFDrawViewHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3952BD060701F95F4BF485620E2C9887 /* LFDrawViewHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A31A6E482633FDCE6D9BD7BFC30F2E3E /* LFBrush+create.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E46EA806B9E0944E0B1261422F9406 /* LFBrush+create.m */; };
+		AD06BCC67050C41DB6679947D96578E5 /* CALayer+LFBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBCB0F8BE9D0C42B71C53AE130D405C /* CALayer+LFBrush.m */; };
+		B69EC2C09612CEAF45C9941609CC4688 /* LFBlurryBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = 767A2CDDD69610C69B75A1DEF1B61B0D /* LFBlurryBrush.m */; };
+		B85A962C481B5956EE61D1D6F6034E36 /* LFDrawView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FF2565FFDD675F1D35A857119318521 /* LFDrawView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC2F1F39422FFB16DF634AA4E198C2CE /* LFChalkBrush.h in Headers */ = {isa = PBXBuildFile; fileRef = EEBA52A08B8C40B91277793850553EE5 /* LFChalkBrush.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BFCA8FCD1F95F38E2845CA1FC6C343E2 /* LFPaintBrush.h in Headers */ = {isa = PBXBuildFile; fileRef = 71B20DFB775530A7910CC7C1C9F21B27 /* LFPaintBrush.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C782DC343DE2A2E7CF8808CAD790941B /* LFPaintBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = E30249E81ACE0B108FF35753F70D9757 /* LFPaintBrush.m */; };
+		DBCC8103F0285A89D0EDFE6F6688DE71 /* LFBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = C3053E61C633A4573E81D9A2472CF838 /* LFBrush.m */; };
+		E4044DDDB1A6C8103848FCFE873E04AA /* LFMediaEditingController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 30F11A8BE2A43F564B7BFBA035B43863 /* LFMediaEditingController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4E8E37F5CE6210B2BC97090DD4E305C /* LFStampBrush.h in Headers */ = {isa = PBXBuildFile; fileRef = FB2B2D226B0BD8AC9FA29AD3E7736087 /* LFStampBrush.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5F139549BF005E407429FD68C11E447 /* LFStampBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = 2414EB0F8742111D628205244ACF6868 /* LFStampBrush.m */; };
+		E95DF98DB22C82E53631361CEED676F6 /* LFBrush+create.h in Headers */ = {isa = PBXBuildFile; fileRef = D184893178A6A9DD7203218374C7AD8C /* LFBrush+create.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EAE5E090E4EF64EA0EF75E6D03FFBD94 /* LFMosaicBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED8FC6768F34294D479C35348430862 /* LFMosaicBrush.m */; };
+		F4F36DC7BAAD03C20271B1A396AA3C71 /* LFMosaicBrush.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B6DF1205F2F4D2B70974D7133E8452F /* LFMosaicBrush.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC8DD80A38997A47257CA55C63988166 /* LFHighlightBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B8E719478B76E8ACB86CF8FE117DA2 /* LFHighlightBrush.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		113D46BFF42690CA3F05413684325ED9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D7571AED104096C26259CF222913EBC;
+			remoteInfo = LFMediaEditingController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03F7BC624C8F32EAC418CC7C37DD822F /* LFFluorescentBrush.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFFluorescentBrush.h; path = LFMediaEditingController/class/vendors/LFDrawView/Brush/LFFluorescentBrush.h; sourceTree = "<group>"; };
+		0C267ED111885E3541245AEE9804B0B4 /* LFBrushCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFBrushCache.h; path = LFMediaEditingController/class/vendors/LFDrawView/Brush/cache/LFBrushCache.h; sourceTree = "<group>"; };
+		0ED8FC6768F34294D479C35348430862 /* LFMosaicBrush.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFMosaicBrush.m; path = LFMediaEditingController/class/vendors/LFDrawView/Brush/LFMosaicBrush.m; sourceTree = "<group>"; };
+		1432D58C9D65C0A6FFC1D7444625778E /* LFMediaEditingController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LFMediaEditingController.release.xcconfig; sourceTree = "<group>"; };
+		22BD743E47131A1B42606D054EAD9332 /* Pods-DrawDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DrawDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		2414EB0F8742111D628205244ACF6868 /* LFStampBrush.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFStampBrush.m; path = LFMediaEditingController/class/vendors/LFDrawView/Brush/LFStampBrush.m; sourceTree = "<group>"; };
+		26B43EBB115D2E7C5E8CA26C303BE24A /* LFSmearBrush.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFSmearBrush.m; path = LFMediaEditingController/class/vendors/LFDrawView/Brush/LFSmearBrush.m; sourceTree = "<group>"; };
+		2B6DF1205F2F4D2B70974D7133E8452F /* LFMosaicBrush.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFMosaicBrush.h; path = LFMediaEditingController/class/vendors/LFDrawView/Brush/LFMosaicBrush.h; sourceTree = "<group>"; };
+		30F11A8BE2A43F564B7BFBA035B43863 /* LFMediaEditingController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LFMediaEditingController-umbrella.h"; sourceTree = "<group>"; };
+		320529B0DCA229BDE54A7DB340B9A6C3 /* Pods-DrawDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DrawDemo-dummy.m"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3839CA81FE89DE7AE560A4921005F0BD /* LFChalkBrush.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFChalkBrush.m; path = LFMediaEditingController/class/vendors/LFDrawView/Brush/LFChalkBrush.m; sourceTree = "<group>"; };
+		3952BD060701F95F4BF485620E2C9887 /* LFDrawViewHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFDrawViewHeader.h; path = LFMediaEditingController/class/vendors/LFDrawView/LFDrawViewHeader.h; sourceTree = "<group>"; };
+		3BBCB0F8BE9D0C42B71C53AE130D405C /* CALayer+LFBrush.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CALayer+LFBrush.m"; path = "LFMediaEditingController/class/vendors/LFDrawView/Brush/category/CALayer+LFBrush.m"; sourceTree = "<group>"; };
+		4532380957B748D65B10A7E6BB8A7498 /* Pods-DrawDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DrawDemo.modulemap"; sourceTree = "<group>"; };
+		459731D541CBD4A60D9C9B783D859F71 /* Pods-DrawDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DrawDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		47D5ABA7A2FBA0C0326F4D026E542BC2 /* LFSmearBrush.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFSmearBrush.h; path = LFMediaEditingController/class/vendors/LFDrawView/Brush/LFSmearBrush.h; sourceTree = "<group>"; };
+		4954E39E1624220657AA14704BFA8397 /* Pods-DrawDemo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DrawDemo-Info.plist"; sourceTree = "<group>"; };
+		63678C1AABEF940E0B86008110D0C307 /* LFMediaEditingController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LFMediaEditingController-prefix.pch"; sourceTree = "<group>"; };
+		67CAC55E8F358F3166A77B71A1DD56B6 /* Pods-DrawDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DrawDemo.release.xcconfig"; sourceTree = "<group>"; };
+		71B20DFB775530A7910CC7C1C9F21B27 /* LFPaintBrush.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFPaintBrush.h; path = LFMediaEditingController/class/vendors/LFDrawView/Brush/LFPaintBrush.h; sourceTree = "<group>"; };
+		72B8E719478B76E8ACB86CF8FE117DA2 /* LFHighlightBrush.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFHighlightBrush.m; path = LFMediaEditingController/class/vendors/LFDrawView/Brush/LFHighlightBrush.m; sourceTree = "<group>"; };
+		74A930F7D6914497C150B5F582036265 /* LFMediaEditingController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LFMediaEditingController-Info.plist"; sourceTree = "<group>"; };
+		763A7A78C4405D49072D96A96A8F0E01 /* LFBrushCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFBrushCache.m; path = LFMediaEditingController/class/vendors/LFDrawView/Brush/cache/LFBrushCache.m; sourceTree = "<group>"; };
+		767A2CDDD69610C69B75A1DEF1B61B0D /* LFBlurryBrush.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFBlurryBrush.m; path = LFMediaEditingController/class/vendors/LFDrawView/Brush/LFBlurryBrush.m; sourceTree = "<group>"; };
+		7903A7EDFA40063DF6A39EECCB47F7C0 /* LFMediaEditingController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LFMediaEditingController.modulemap; sourceTree = "<group>"; };
+		7A86DB2D73E9DEF0462032B9F829309F /* LFBlurryBrush.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFBlurryBrush.h; path = LFMediaEditingController/class/vendors/LFDrawView/Brush/LFBlurryBrush.h; sourceTree = "<group>"; };
+		7FF2565FFDD675F1D35A857119318521 /* LFDrawView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFDrawView.h; path = LFMediaEditingController/class/vendors/LFDrawView/LFDrawView.h; sourceTree = "<group>"; };
+		860E8170AE3610DE33ABB0766B8877CC /* LFFluorescentBrush.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFFluorescentBrush.m; path = LFMediaEditingController/class/vendors/LFDrawView/Brush/LFFluorescentBrush.m; sourceTree = "<group>"; };
+		87837B6D62F38F0A1B6A1A9A12B15E37 /* LFBrush.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFBrush.h; path = LFMediaEditingController/class/vendors/LFDrawView/Brush/LFBrush.h; sourceTree = "<group>"; };
+		94DD65D00B644A2796547A022A8BFF4A /* Pods-DrawDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DrawDemo-umbrella.h"; sourceTree = "<group>"; };
+		94E46EA806B9E0944E0B1261422F9406 /* LFBrush+create.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "LFBrush+create.m"; path = "LFMediaEditingController/class/vendors/LFDrawView/Brush/category/LFBrush+create.m"; sourceTree = "<group>"; };
+		94EB58BAA0F1780F47C7BC3B915034B0 /* Pods_DrawDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrawDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B0D5EA5514C44C23B2A28FEC76022636 /* LFDrawView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFDrawView.m; path = LFMediaEditingController/class/vendors/LFDrawView/LFDrawView.m; sourceTree = "<group>"; };
+		C3053E61C633A4573E81D9A2472CF838 /* LFBrush.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFBrush.m; path = LFMediaEditingController/class/vendors/LFDrawView/Brush/LFBrush.m; sourceTree = "<group>"; };
+		CFF28A1BAC14B3A8F49D9434F80BE8F3 /* CALayer+LFBrush.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CALayer+LFBrush.h"; path = "LFMediaEditingController/class/vendors/LFDrawView/Brush/category/CALayer+LFBrush.h"; sourceTree = "<group>"; };
+		D184893178A6A9DD7203218374C7AD8C /* LFBrush+create.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "LFBrush+create.h"; path = "LFMediaEditingController/class/vendors/LFDrawView/Brush/category/LFBrush+create.h"; sourceTree = "<group>"; };
+		D1861594A77A463CD54AA59324547764 /* LFEraserBrush.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFEraserBrush.m; path = LFMediaEditingController/class/vendors/LFDrawView/Brush/LFEraserBrush.m; sourceTree = "<group>"; };
+		DA24E3F7D2440A19DA7F8BE25DD826F1 /* LFEraserBrush.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFEraserBrush.h; path = LFMediaEditingController/class/vendors/LFDrawView/Brush/LFEraserBrush.h; sourceTree = "<group>"; };
+		DA51F57DD4BA7116940C81CB2887D7B3 /* LFHighlightBrush.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFHighlightBrush.h; path = LFMediaEditingController/class/vendors/LFDrawView/Brush/LFHighlightBrush.h; sourceTree = "<group>"; };
+		E30249E81ACE0B108FF35753F70D9757 /* LFPaintBrush.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFPaintBrush.m; path = LFMediaEditingController/class/vendors/LFDrawView/Brush/LFPaintBrush.m; sourceTree = "<group>"; };
+		EEBA52A08B8C40B91277793850553EE5 /* LFChalkBrush.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFChalkBrush.h; path = LFMediaEditingController/class/vendors/LFDrawView/Brush/LFChalkBrush.h; sourceTree = "<group>"; };
+		F3933694AFDF7133B858A906F01744F3 /* Pods-DrawDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DrawDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		F517A77256EC8D99488CA36F42A690DD /* LFMediaEditingController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LFMediaEditingController-dummy.m"; sourceTree = "<group>"; };
+		F76EABDF926029903B174779D4B71346 /* LFMediaEditingController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LFMediaEditingController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7E1E80EF8FEEB02251B73679889A4C3 /* LFMediaEditingController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LFMediaEditingController.debug.xcconfig; sourceTree = "<group>"; };
+		FB2B2D226B0BD8AC9FA29AD3E7736087 /* LFStampBrush.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFStampBrush.h; path = LFMediaEditingController/class/vendors/LFDrawView/Brush/LFStampBrush.h; sourceTree = "<group>"; };
+		FC856DECC27EB42AB3049BA9D34DAA77 /* Pods-DrawDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DrawDemo-frameworks.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3794CFB1B12B2FCF2A3B5C150347B213 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74E6FFBA3C2E519E2EE10BA94676E5F4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEFB78F609A156E887A1B6AE003998DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F2D6FA2E47DFD5ACD4498417DCA4D32 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16E2410E5DF0CEC2B37E56B777003A3F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB9ECC524609D8284471C69EC8CC9028 /* LFMediaEditingController */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		35114CE6356291CF03953823368B0EAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F76EABDF926029903B174779D4B71346 /* LFMediaEditingController.framework */,
+				94EB58BAA0F1780F47C7BC3B915034B0 /* Pods_DrawDemo.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		352AFE8B09CBE12CA11E3F7C076D516B /* LFDrawView */ = {
+			isa = PBXGroup;
+			children = (
+				CFF28A1BAC14B3A8F49D9434F80BE8F3 /* CALayer+LFBrush.h */,
+				3BBCB0F8BE9D0C42B71C53AE130D405C /* CALayer+LFBrush.m */,
+				7A86DB2D73E9DEF0462032B9F829309F /* LFBlurryBrush.h */,
+				767A2CDDD69610C69B75A1DEF1B61B0D /* LFBlurryBrush.m */,
+				87837B6D62F38F0A1B6A1A9A12B15E37 /* LFBrush.h */,
+				C3053E61C633A4573E81D9A2472CF838 /* LFBrush.m */,
+				D184893178A6A9DD7203218374C7AD8C /* LFBrush+create.h */,
+				94E46EA806B9E0944E0B1261422F9406 /* LFBrush+create.m */,
+				0C267ED111885E3541245AEE9804B0B4 /* LFBrushCache.h */,
+				763A7A78C4405D49072D96A96A8F0E01 /* LFBrushCache.m */,
+				EEBA52A08B8C40B91277793850553EE5 /* LFChalkBrush.h */,
+				3839CA81FE89DE7AE560A4921005F0BD /* LFChalkBrush.m */,
+				7FF2565FFDD675F1D35A857119318521 /* LFDrawView.h */,
+				B0D5EA5514C44C23B2A28FEC76022636 /* LFDrawView.m */,
+				3952BD060701F95F4BF485620E2C9887 /* LFDrawViewHeader.h */,
+				DA24E3F7D2440A19DA7F8BE25DD826F1 /* LFEraserBrush.h */,
+				D1861594A77A463CD54AA59324547764 /* LFEraserBrush.m */,
+				03F7BC624C8F32EAC418CC7C37DD822F /* LFFluorescentBrush.h */,
+				860E8170AE3610DE33ABB0766B8877CC /* LFFluorescentBrush.m */,
+				DA51F57DD4BA7116940C81CB2887D7B3 /* LFHighlightBrush.h */,
+				72B8E719478B76E8ACB86CF8FE117DA2 /* LFHighlightBrush.m */,
+				2B6DF1205F2F4D2B70974D7133E8452F /* LFMosaicBrush.h */,
+				0ED8FC6768F34294D479C35348430862 /* LFMosaicBrush.m */,
+				71B20DFB775530A7910CC7C1C9F21B27 /* LFPaintBrush.h */,
+				E30249E81ACE0B108FF35753F70D9757 /* LFPaintBrush.m */,
+				47D5ABA7A2FBA0C0326F4D026E542BC2 /* LFSmearBrush.h */,
+				26B43EBB115D2E7C5E8CA26C303BE24A /* LFSmearBrush.m */,
+				FB2B2D226B0BD8AC9FA29AD3E7736087 /* LFStampBrush.h */,
+				2414EB0F8742111D628205244ACF6868 /* LFStampBrush.m */,
+			);
+			name = LFDrawView;
+			sourceTree = "<group>";
+		};
+		55637F1272E73486FFF3571BBA72900B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7903A7EDFA40063DF6A39EECCB47F7C0 /* LFMediaEditingController.modulemap */,
+				F517A77256EC8D99488CA36F42A690DD /* LFMediaEditingController-dummy.m */,
+				74A930F7D6914497C150B5F582036265 /* LFMediaEditingController-Info.plist */,
+				63678C1AABEF940E0B86008110D0C307 /* LFMediaEditingController-prefix.pch */,
+				30F11A8BE2A43F564B7BFBA035B43863 /* LFMediaEditingController-umbrella.h */,
+				F7E1E80EF8FEEB02251B73679889A4C3 /* LFMediaEditingController.debug.xcconfig */,
+				1432D58C9D65C0A6FFC1D7444625778E /* LFMediaEditingController.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LFMediaEditingController";
+			sourceTree = "<group>";
+		};
+		5A9C771EEBFE2930CF9F45AB489952C3 /* Pods-DrawDemo */ = {
+			isa = PBXGroup;
+			children = (
+				4532380957B748D65B10A7E6BB8A7498 /* Pods-DrawDemo.modulemap */,
+				459731D541CBD4A60D9C9B783D859F71 /* Pods-DrawDemo-acknowledgements.markdown */,
+				F3933694AFDF7133B858A906F01744F3 /* Pods-DrawDemo-acknowledgements.plist */,
+				320529B0DCA229BDE54A7DB340B9A6C3 /* Pods-DrawDemo-dummy.m */,
+				FC856DECC27EB42AB3049BA9D34DAA77 /* Pods-DrawDemo-frameworks.sh */,
+				4954E39E1624220657AA14704BFA8397 /* Pods-DrawDemo-Info.plist */,
+				94DD65D00B644A2796547A022A8BFF4A /* Pods-DrawDemo-umbrella.h */,
+				22BD743E47131A1B42606D054EAD9332 /* Pods-DrawDemo.debug.xcconfig */,
+				67CAC55E8F358F3166A77B71A1DD56B6 /* Pods-DrawDemo.release.xcconfig */,
+			);
+			name = "Pods-DrawDemo";
+			path = "Target Support Files/Pods-DrawDemo";
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				16E2410E5DF0CEC2B37E56B777003A3F /* Pods */,
+				35114CE6356291CF03953823368B0EAF /* Products */,
+				CF7A445B9672BAC9DD3D4CBBFD764446 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		CF7A445B9672BAC9DD3D4CBBFD764446 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5A9C771EEBFE2930CF9F45AB489952C3 /* Pods-DrawDemo */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB9ECC524609D8284471C69EC8CC9028 /* LFMediaEditingController */ = {
+			isa = PBXGroup;
+			children = (
+				352AFE8B09CBE12CA11E3F7C076D516B /* LFDrawView */,
+				55637F1272E73486FFF3571BBA72900B /* Support Files */,
+			);
+			path = LFMediaEditingController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0FE5E35B13BAF900E4895A8CB6CB3C2E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CA0B813FBD52558111C8D27FA45AC94 /* CALayer+LFBrush.h in Headers */,
+				8F854B8548158EFF296ED0C72F8589BA /* LFBlurryBrush.h in Headers */,
+				E95DF98DB22C82E53631361CEED676F6 /* LFBrush+create.h in Headers */,
+				2D3D08B38BA1A3794B1CE505B14C76CA /* LFBrush.h in Headers */,
+				82BB9E62A154C46058292AE66DB7DB10 /* LFBrushCache.h in Headers */,
+				BC2F1F39422FFB16DF634AA4E198C2CE /* LFChalkBrush.h in Headers */,
+				B85A962C481B5956EE61D1D6F6034E36 /* LFDrawView.h in Headers */,
+				9291DD0EEDA08849E407FCF35E4C31E4 /* LFDrawViewHeader.h in Headers */,
+				3C0D2613BEFC19F163A6B556F052F124 /* LFEraserBrush.h in Headers */,
+				39437950106B98757F99F2197A421F65 /* LFFluorescentBrush.h in Headers */,
+				2E4C6F2DB7620ED67EA0EBDE49B26218 /* LFHighlightBrush.h in Headers */,
+				E4044DDDB1A6C8103848FCFE873E04AA /* LFMediaEditingController-umbrella.h in Headers */,
+				F4F36DC7BAAD03C20271B1A396AA3C71 /* LFMosaicBrush.h in Headers */,
+				BFCA8FCD1F95F38E2845CA1FC6C343E2 /* LFPaintBrush.h in Headers */,
+				28CD605A5C8DE395752C7065757C9108 /* LFSmearBrush.h in Headers */,
+				E4E8E37F5CE6210B2BC97090DD4E305C /* LFStampBrush.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FFBB02286B6BB273710F315A3E55E62 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2961AA74261BEC0DBCA9D89D7701C007 /* Pods-DrawDemo-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3D7571AED104096C26259CF222913EBC /* LFMediaEditingController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3408A8DB97A99CC5F49CAC4BCC7F9694 /* Build configuration list for PBXNativeTarget "LFMediaEditingController" */;
+			buildPhases = (
+				0FE5E35B13BAF900E4895A8CB6CB3C2E /* Headers */,
+				D6E4D368CD9256149E4672715AA1FC7D /* Sources */,
+				3794CFB1B12B2FCF2A3B5C150347B213 /* Frameworks */,
+				84C97DB1F02D15C4D9C270ADD0F57E1C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LFMediaEditingController;
+			productName = LFMediaEditingController;
+			productReference = F76EABDF926029903B174779D4B71346 /* LFMediaEditingController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5EC2FAEA095E9BAF441C0FE30B9036D5 /* Pods-DrawDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA6997D6B7D1C817603644CAED4E74D3 /* Build configuration list for PBXNativeTarget "Pods-DrawDemo" */;
+			buildPhases = (
+				5FFBB02286B6BB273710F315A3E55E62 /* Headers */,
+				C1072A99E81A99C21461FD9B97E0860B /* Sources */,
+				BEFB78F609A156E887A1B6AE003998DE /* Frameworks */,
+				A6657FB646C980AFD9C088762C371ACC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C6D00DB30ED2111117A4EFDC7D5E17D1 /* PBXTargetDependency */,
+			);
+			name = "Pods-DrawDemo";
+			productName = "Pods-DrawDemo";
+			productReference = 94EB58BAA0F1780F47C7BC3B915034B0 /* Pods_DrawDemo.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 35114CE6356291CF03953823368B0EAF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D7571AED104096C26259CF222913EBC /* LFMediaEditingController */,
+				5EC2FAEA095E9BAF441C0FE30B9036D5 /* Pods-DrawDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84C97DB1F02D15C4D9C270ADD0F57E1C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6657FB646C980AFD9C088762C371ACC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C1072A99E81A99C21461FD9B97E0860B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FD64BBD117D14D26D7D6C98FFE94137 /* Pods-DrawDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6E4D368CD9256149E4672715AA1FC7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD06BCC67050C41DB6679947D96578E5 /* CALayer+LFBrush.m in Sources */,
+				B69EC2C09612CEAF45C9941609CC4688 /* LFBlurryBrush.m in Sources */,
+				A31A6E482633FDCE6D9BD7BFC30F2E3E /* LFBrush+create.m in Sources */,
+				DBCC8103F0285A89D0EDFE6F6688DE71 /* LFBrush.m in Sources */,
+				40E2570E75262A0565A6DFE8538E8CEA /* LFBrushCache.m in Sources */,
+				7C2D37FFF637A7AA43AAD41D6CC48100 /* LFChalkBrush.m in Sources */,
+				82C308DF072A4980AAA7B5ECB3BE17A0 /* LFDrawView.m in Sources */,
+				13042FD251A6001ADF75F2AFB3DD0C20 /* LFEraserBrush.m in Sources */,
+				7424E42E5AF7AA01AE84F94A6D2A2251 /* LFFluorescentBrush.m in Sources */,
+				FC8DD80A38997A47257CA55C63988166 /* LFHighlightBrush.m in Sources */,
+				14626E04066CB07C6257D4A08E815194 /* LFMediaEditingController-dummy.m in Sources */,
+				EAE5E090E4EF64EA0EF75E6D03FFBD94 /* LFMosaicBrush.m in Sources */,
+				C782DC343DE2A2E7CF8808CAD790941B /* LFPaintBrush.m in Sources */,
+				2562C7A22D4306194E16A9C5A29DF4EA /* LFSmearBrush.m in Sources */,
+				E5F139549BF005E407429FD68C11E447 /* LFStampBrush.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C6D00DB30ED2111117A4EFDC7D5E17D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LFMediaEditingController;
+			target = 3D7571AED104096C26259CF222913EBC /* LFMediaEditingController */;
+			targetProxy = 113D46BFF42690CA3F05413684325ED9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		49C9BFA91C952293D56D773544592514 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67CAC55E8F358F3166A77B71A1DD56B6 /* Pods-DrawDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-DrawDemo/Pods-DrawDemo-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DrawDemo/Pods-DrawDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5508EA2340B42A4E40EF9DBD7BB05E73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7E1E80EF8FEEB02251B73679889A4C3 /* LFMediaEditingController.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LFMediaEditingController/LFMediaEditingController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LFMediaEditingController/LFMediaEditingController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LFMediaEditingController/LFMediaEditingController.modulemap";
+				PRODUCT_MODULE_NAME = LFMediaEditingController;
+				PRODUCT_NAME = LFMediaEditingController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9CC83A4AF68318A91B1240EDB06D426A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1432D58C9D65C0A6FFC1D7444625778E /* LFMediaEditingController.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LFMediaEditingController/LFMediaEditingController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LFMediaEditingController/LFMediaEditingController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LFMediaEditingController/LFMediaEditingController.modulemap";
+				PRODUCT_MODULE_NAME = LFMediaEditingController;
+				PRODUCT_NAME = LFMediaEditingController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A468EC8491E528B5B858F5B39F640F69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22BD743E47131A1B42606D054EAD9332 /* Pods-DrawDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-DrawDemo/Pods-DrawDemo-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DrawDemo/Pods-DrawDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ECB437504DF805BD96CAABF97400B526 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3408A8DB97A99CC5F49CAC4BCC7F9694 /* Build configuration list for PBXNativeTarget "LFMediaEditingController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5508EA2340B42A4E40EF9DBD7BB05E73 /* Debug */,
+				9CC83A4AF68318A91B1240EDB06D426A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */,
+				ECB437504DF805BD96CAABF97400B526 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA6997D6B7D1C817603644CAED4E74D3 /* Build configuration list for PBXNativeTarget "Pods-DrawDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A468EC8491E528B5B858F5B39F640F69 /* Debug */,
+				49C9BFA91C952293D56D773544592514 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
