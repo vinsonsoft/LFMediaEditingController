@@ -24,15 +24,8 @@
 #define kNaviBarHeight ({ CGFloat __h = CGRectGetHeight(self.navigationController.navigationBar.frame); __h > 0 ? __h : 44.f; })
 #define kCustomTopbarHeight kNaviBarHeight + CGRectGetHeight([UIApplication sharedApplication].statusBarFrame)
 /** Distance from the top of self.view to the bottom of the status bar / notch, measured from the window so that hidden or transparent navigation bars (UIKit or SwiftUI) and host-side safe-area insets do not shift the custom top bar. Falls back to the view's own safe area before the view is in a window. */
-#define kLFTopSafeInset ({ \
-    CGFloat __top = self.view.safeAreaInsets.top; \
-    UIWindow *__window = self.view.window; \
-    if (__window) { \
-        /* The key window is raised above UIWindowLevelStatusBar while editing; on device such a window can report safeAreaInsets.top == 0, so never let the window value shrink the view's own inset. */ \
-        CGFloat __viewY = [self.view convertPoint:CGPointZero toView:__window].y; \
-        __top = MAX(__top, __window.safeAreaInsets.top - __viewY); \
-    } \
-    MAX(0, __top); })
+#import "LFBaseEditingController.h"
+#define kLFTopSafeInset LFMETopSafeInsetForView(self.view)
 #define kCustomTopbarHeight_iOS11 kNaviBarHeight + kLFTopSafeInset
 #define hasSafeArea ([[UIApplication sharedApplication] delegate].window.safeAreaInsets.bottom > 0)
 

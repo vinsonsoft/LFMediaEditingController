@@ -152,14 +152,24 @@
     self.lf_topbar = topbar;
 }
 
+- (void)setFrame:(CGRect)frame
+{
+    [super setFrame:frame];
+    /** The bar is created below the screen and animated up; re-measure the top inset once its final position is set. */
+    [self setNeedsLayout];
+}
+
+- (void)safeAreaInsetsDidChange
+{
+    [super safeAreaInsetsDidChange];
+    [self setNeedsLayout];
+}
+
 - (void)layoutSubviews
 {
     [super layoutSubviews];
     /** Re-measure the top bar from our own safe area (see LFTextBar). */
-    CGFloat inset = 0;
-    if (@available(iOS 11.0, *)) {
-        inset = self.safeAreaInsets.top;
-    }
+    CGFloat inset = LFMETopSafeInsetForView(self);
     CGFloat topbarHeight = MAX(_customTopbarHeight, _naviHeight + inset);
     if (fabs(self.lf_topbar.lfme_height - topbarHeight) > 0.5) {
         CGFloat delta = topbarHeight - self.lf_topbar.lfme_height;

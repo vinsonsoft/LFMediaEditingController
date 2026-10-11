@@ -32,6 +32,33 @@
 
 @end
 
+static CGFloat LFME_cachedTopSafeInset = 0;
+
+CGFloat LFMEWindowTopSafeInset(void)
+{
+    if (@available(iOS 11.0, *)) {
+        for (UIWindow *window in [UIApplication sharedApplication].windows) {
+            if (window.isHidden || CGRectIsEmpty(window.bounds)) continue;
+            LFME_cachedTopSafeInset = MAX(LFME_cachedTopSafeInset, window.safeAreaInsets.top);
+        }
+    }
+    return LFME_cachedTopSafeInset;
+}
+
+CGFloat LFMETopSafeInsetForView(UIView *view)
+{
+    CGFloat top = 0;
+    if (@available(iOS 11.0, *)) {
+        top = view.safeAreaInsets.top;
+        CGFloat viewY = 0;
+        if (view.window) {
+            viewY = [view convertPoint:CGPointZero toView:view.window].y;
+        }
+        top = MAX(top, LFMEWindowTopSafeInset() - viewY);
+    }
+    return MAX(0, top);
+}
+
 @implementation LFBaseEditingController
 
 - (instancetype)init
@@ -73,6 +100,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    /** Sample the real inset before raising the window level (a raised window may report 0). */
+    LFMEWindowTopSafeInset();
     // 隐藏状态栏而不改变安全区域的高度
     [UIApplication sharedApplication].keyWindow.windowLevel = UIWindowLevelStatusBar + 1;
     /** The system navigation bar overlaps the custom Cancel/OK bar and swallows its touches (it is fully transparent on iOS 26). Hide it here instead of relying on the host to do it. */

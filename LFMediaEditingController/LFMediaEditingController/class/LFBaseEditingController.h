@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+/** Top safe-area inset (status bar / notch) of the app's windows, in window coordinates.
+ Sampled from every window and cached at its maximum, because the editor raises the key window above the status bar level and a raised window — or a view inside a scroll container — may report 0. Always >= what the windows have ever reported. */
+UIKIT_EXTERN CGFloat LFMEWindowTopSafeInset(void);
+
+/** Top inset to apply to a view: the window inset minus the view's own offset in the window (so hosts that already inset the view are not inset twice), never less than the view's own safeAreaInsets.top. */
+UIKIT_EXTERN CGFloat LFMETopSafeInsetForView(UIView *view);
+
 @interface LFBaseEditingController : UIViewController
 
 /** 是否隐藏状态栏 默认YES */
