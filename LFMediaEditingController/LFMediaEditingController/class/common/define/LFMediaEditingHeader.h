@@ -28,10 +28,11 @@
     CGFloat __top = self.view.safeAreaInsets.top; \
     UIWindow *__window = self.view.window; \
     if (__window) { \
+        /* The key window is raised above UIWindowLevelStatusBar while editing; on device such a window can report safeAreaInsets.top == 0, so never let the window value shrink the view's own inset. */ \
         CGFloat __viewY = [self.view convertPoint:CGPointZero toView:__window].y; \
-        __top = MAX(0, __window.safeAreaInsets.top - __viewY); \
+        __top = MAX(__top, __window.safeAreaInsets.top - __viewY); \
     } \
-    __top; })
+    MAX(0, __top); })
 #define kCustomTopbarHeight_iOS11 kNaviBarHeight + kLFTopSafeInset
 #define hasSafeArea ([[UIApplication sharedApplication] delegate].window.safeAreaInsets.bottom > 0)
 
