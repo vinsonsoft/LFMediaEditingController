@@ -59,6 +59,7 @@
 @property (nonatomic, strong) NSMutableArray <NSMutableArray <LFAudioItem *> *> *m_audioUrls;
 
 @property (nonatomic, weak) UITableView *tableView;
+@property (nonatomic, weak) UIView *lf_topbar;
 @property (nonatomic, weak) UIButton *allSelectButton;
 @property (nonatomic, weak) UIButton *inverseSelectButton;
 
@@ -148,6 +149,27 @@
     [topbar addSubview:finishButton];
     
     [self addSubview:topbar];
+    self.lf_topbar = topbar;
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    /** Re-measure the top bar from our own safe area (see LFTextBar). */
+    CGFloat inset = 0;
+    if (@available(iOS 11.0, *)) {
+        inset = self.safeAreaInsets.top;
+    }
+    CGFloat topbarHeight = MAX(_customTopbarHeight, _naviHeight + inset);
+    if (fabs(self.lf_topbar.lfme_height - topbarHeight) > 0.5) {
+        CGFloat delta = topbarHeight - self.lf_topbar.lfme_height;
+        self.lf_topbar.lfme_height = topbarHeight;
+        for (UIView *subview in self.lf_topbar.subviews) {
+            subview.lfme_y = topbarHeight - subview.lfme_height;
+        }
+        self.tableView.lfme_y = topbarHeight;
+        self.tableView.lfme_height = MAX(0, self.tableView.lfme_height - delta);
+    }
 }
 
 - (void)configTableView

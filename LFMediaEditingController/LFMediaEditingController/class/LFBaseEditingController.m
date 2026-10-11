@@ -84,9 +84,18 @@
     }
 }
 
+- (void)viewSafeAreaInsetsDidChange
+{
+    [super viewSafeAreaInsetsDidChange];
+    /** The custom top bar height is recomputed in viewWillLayoutSubviews; make sure that runs as soon as the inset is known. */
+    [self.view setNeedsLayout];
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    [self.view setNeedsLayout];
+    [self.view layoutIfNeeded];
     if (@available(iOS 13.0, *)) {
         if (isiPhone && self.navigationController.modalPresentationStyle == UIModalPresentationPageSheet) {
             // 不允许下拉关闭

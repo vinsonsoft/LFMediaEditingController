@@ -94,6 +94,26 @@ CGFloat const LFTextBarAlignmentTag = 221;
     [self setTextSliderColorAtIndex:0]; /** 白色 */
 }
 
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    /** The controller computes customTopbarHeight when the bar is created, which can be before the safe-area inset is known (first layout, hosted in a page/scroll container, raised window level). Re-measure from our own safe area so the Cancel/OK row never ends up under the status bar. */
+    CGFloat inset = 0;
+    if (@available(iOS 11.0, *)) {
+        inset = self.safeAreaInsets.top;
+    }
+    CGFloat topbarHeight = MAX(_customTopbarHeight, _naviHeight + inset);
+    if (fabs(self.topbar.lfme_height - topbarHeight) > 0.5) {
+        CGFloat delta = topbarHeight - self.topbar.lfme_height;
+        self.topbar.lfme_height = topbarHeight;
+        for (UIView *subview in self.topbar.subviews) {
+            subview.lfme_y = topbarHeight - subview.lfme_height;
+        }
+        self.lf_textView.lfme_y = topbarHeight;
+        self.lf_textView.lfme_height = MAX(0, self.lf_textView.lfme_height - delta);
+    }
+}
+
 - (BOOL)becomeFirstResponder
 {
     [super becomeFirstResponder];
